@@ -46,13 +46,36 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+.card {
+
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 250px):
+
+  gap: 20px;
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+ 
+  padding: 20px;
+}
+
+[class^='box'] {
+  height: 150px;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -64,5 +87,14 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+  main aside {
+    align-self: stretch;
   }
 }
